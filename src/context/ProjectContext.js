@@ -32,9 +32,13 @@ export const ProjectProvider = ({children})=> {
       date: new Date()
       }
   ])
+  
+  const [showModal, setShowModal ] = useState(false);
+  const handleCloseModal = () => setShowModal(false);
 
   const deleteProject = (id)=> {
     setProjects((item) => item.filter((e) => e !== id));
+    handleCloseModal();
   }
 
   const validateForm = (values)=>{
@@ -64,7 +68,10 @@ export const ProjectProvider = ({children})=> {
         deleteProject,
         projects,
         setProjects,
-        validateForm
+        validateForm,
+        handleCloseModal,
+        showModal,
+        setShowModal
       }}>
       {children}
     </ProjectContext.Provider>
