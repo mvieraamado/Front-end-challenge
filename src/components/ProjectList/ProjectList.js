@@ -7,7 +7,7 @@ import CardProject from "../CardProject/CardProject";
 const ProjectList = ()=> {
     const { projects } = useContext(ProjectContext);
 
-    return(
+    return (
         <>
             <Container>
                 <Row>
