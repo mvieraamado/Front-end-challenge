@@ -1,4 +1,32 @@
-# Getting Started with Create React App
+![logo](/challenge-front/public/logo.png)
+
+# Frontend Challenge
+## Objective
++ The user accesses a project manager to manage, create, edit and delete projects.
++ The user cannot submite the creation or editing of a project if the fields are not validated.
++ The user must be able to use the manager on Desktop and Mobile.
+
+## Use technologies
++ HTML
++ React router dom
++ React Bootstrap
++ React Icons
++ Formik
+
+## How to clone the project
+1- To clone the repository using HTTPS, under "Clone with HTTPS", click copy. To clone the repository using an SSH key, including a certificate issued by your organisation's SSH certificate authority, click Use SSH and then click copy. To clone a repository using the GitHub CLI, click Use GitHub CLI and then click copy.
+
+2- Go to your local repository.
+
+3- Change the current working directory to the location where you want to clone the directory.
+
+4- Type git clone, then paste the URL you copied earlier.
+
+5- Press Enter to create your local clone.
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
