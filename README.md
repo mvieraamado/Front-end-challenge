@@ -1,5 +1,3 @@
-![logo](/challenge-front/public/logo.png)
-
 # Frontend Challenge
 ## Objective
 + The user accesses a project manager to manage, create, edit and delete projects.
@@ -24,7 +22,8 @@
 
 5- Press Enter to create your local clone.
 
-
+## Project deployment
+[Esto es | Frontend challenge](https://esto-es-projects.netlify.app/)
 
 ## Getting Started with Create React App
 

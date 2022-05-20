@@ -9,7 +9,7 @@ const EditProject = ()=> {
   const { projects, setProjects } = useContext(ProjectContext);
   const navigate = useNavigate();
   const {id} = useParams();
-  const selectedProject = projects.find(project => project.id == id);
+  const selectedProject = projects.find(project => project.id === id);
 
   const initialValues = {
     name: selectedProject.name,
