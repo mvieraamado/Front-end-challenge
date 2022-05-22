@@ -39,7 +39,7 @@ export const ProjectProvider = ({children})=> {
   const deleteConfirm = ()=> setShowModal(true);
 
   const deleteProject = (id)=> {
-    setProjects((item) => item.filter((e) => e !== id));
+    setProjects((item) => item.filter((e) => e.id !== id));
     handleCloseModal();
   }
 

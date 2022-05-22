@@ -23,7 +23,10 @@ const DesktopCard = ()=> {
                 <tbody> 
                     {projects?.map((project) => ( 
                         <tr key={project.id}>
-                            <td>{project.name}</td>
+                            <td>
+                                <h5>{project.name}</h5>
+                                <p>Creation date: {project.date.toLocaleString('en-US')}</p>
+                            </td>
                             <td>
                                 <img src="../../avatar.png" alt="logo" className="rounded-circle border border-1 mx-2" height={30}/>
                                 {project.projectManager}

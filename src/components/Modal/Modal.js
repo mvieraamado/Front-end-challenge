@@ -16,7 +16,7 @@ const ModalProject = ({project})=> {
             <Button variant="secondary" onClick={handleCloseModal}>
               Cancel
             </Button>
-            <Button variant="danger" onClick={()=>deleteProject(project)}>
+            <Button variant="danger" onClick={()=>deleteProject(project.id)}>
               Delete
             </Button>
           </Modal.Footer>
