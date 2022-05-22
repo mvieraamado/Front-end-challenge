@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./app.css"
 import AddProject from "./components/Administrator/AddProject";
 import EditProject from "./components/Administrator/EditProject";
 import ProjectList from "./components/ProjectList/ProjectList";

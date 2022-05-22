@@ -32,7 +32,7 @@ const EditProject = ()=> {
 
   return (
     <>
-      <Container fluid className="p-5">
+      <Container fluid className="p-4">
           <Row>
               <Title props="Edit Project"/>
               <MyForm initialValues={initialValues} submitHandler={editSubmit} submitButton="Save changes"/>

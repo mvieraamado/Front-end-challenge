@@ -9,15 +9,15 @@ const ProjectList = ()=> {
 
     return (
         <>
-            <Container>
+            <Container className="my-3">
                 <Row>
-                    <Col xs={12} className="pb-4 pt-2 d-flex flex-row justify-content-between">
-                        <h3>My projects</h3>
+                    <Col xs={12} className="pt-2 d-flex flex-row justify-content-between">
+                        <h4>My projects</h4>
                         <Link to="/create"><Button variant="danger">+ Add project</Button></Link>
                     </Col>
                 </Row>
             </Container>
-            <Container xs={12} className="px-5">
+            <Container xs={12} className="px-2">
                 {projects?.map((project) => (
                     <CardProject key={project.id} project={project}/>
                     )

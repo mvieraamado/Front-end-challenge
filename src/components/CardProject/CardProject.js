@@ -11,11 +11,11 @@ const CardProject = ({project})=> {
     const deleteConfirm = ()=> setShowModal(true);
 
     return (
-        <div className="row p-2 my-2 border border-secondary">
+        <div className="row p-2 cardProject">
             <Col xs={8}>
                 <h5>{project.name}</h5>
                 <p>Creation date: {project.date.toLocaleString('en-US')}</p>
-                <img src="../../avatar.png" alt="logo" className="rounded-circle border border-1" height={40}/>
+                <img src="../../avatar.png" alt="logo" className="rounded-circle border border-1" height={30}/>
                 <span className="px-2">{project.assignedTo}</span>
             </Col>
             <Col xs={4}>
@@ -24,7 +24,7 @@ const CardProject = ({project})=> {
                         <BsThreeDotsVertical/>
                     </button>
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <Link to={`/edit/${project.id}`} className="dropdown-item"><BsPencilSquare/> Edit</Link>
+                        <Link to={`/edit/${project.id}`} className="dropdown-item pb-2"><BsPencilSquare/> Edit</Link>
                         <li className="dropdown-item" onClick={()=> deleteConfirm()}><BsTrash/> Delete</li>
                         <ModalProject project={project}/>
                     </ul>

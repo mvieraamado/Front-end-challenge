@@ -24,7 +24,7 @@ const AddProject = ()=> {
         navigate("/")
     }
     return (
-        <Container fluid className="p-5">
+        <Container fluid className="p-4">
             <Row>
                 <Title props="Add project"/>
                 <MyForm initialValues={initialValues} submitHandler={createSubmit} submitButton="Create project"/>
