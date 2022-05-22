@@ -33,9 +33,9 @@ const EditProject = ()=> {
   return (
     <>
       <Container fluid className="p-4">
-          <Row>
-              <Title props="Edit Project"/>
-              <MyForm initialValues={initialValues} submitHandler={editSubmit} submitButton="Save changes"/>
+          <Row className="p-4 d-flex justify-content-center">
+            <Title props="Edit Project"/>
+            <MyForm initialValues={initialValues} submitHandler={editSubmit} submitButton="Save changes"/>
           </Row>
       </Container>
     </>

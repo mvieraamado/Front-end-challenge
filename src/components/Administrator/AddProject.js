@@ -25,7 +25,7 @@ const AddProject = ()=> {
     }
     return (
         <Container fluid className="p-4">
-            <Row>
+            <Row className="p-4 d-flex justify-content-center">
                 <Title props="Add project"/>
                 <MyForm initialValues={initialValues} submitHandler={createSubmit} submitButton="Create project"/>
             </Row>

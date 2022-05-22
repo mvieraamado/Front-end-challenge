@@ -6,26 +6,15 @@
     text-align: start;
   
 }
+.cardMobile{
+    display: none;
+}
 h4{
+    padding-top: 4px;
     font-size: 1.6rem;
     font-weight: 600;  
 }
-h5{
-    padding-top: 10px;
-    font-size: 1.32rem;
-}
-p{
-    font-size: 0.9rem;
-}
-span{
-    font-size: 1rem;
-}
-.cardProject{
-    margin: 5px 0;
-    padding: 30px 10px;
-    border: 1px solid #e6dada;
-}
-@media (max-width: 576px){
+@media (max-width: 768px){
     h4{
         padding-top: 6.4px;
         font-size: 1.21rem;  
@@ -39,9 +28,14 @@ span{
     span{
         font-size: 0.88rem;
     }
-    .cardProject{
-        margin: 0;
-        padding: 10px 8px;
-        border: 1px solid #e6dada;
-    }   
+    .desktopCard{
+        display: none;
+    }
+    .cardMobile{
+        padding: 10px 10px;
+        border: 1px solid #e6dada; 
+        display: block;
+        display: flex;
+        flex-direction: row;
+    } 
 }

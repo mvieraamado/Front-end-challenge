@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ProjectContext } from "../../context/ProjectContext";
-import CardProject from "../CardProject/CardProject";
+import DesktopCard from "../DesktopCard/DesktopCard";
+import MobileCard from "../MobileCard/MobileCard";
 
 const ProjectList = ()=> {
     const { projects } = useContext(ProjectContext);
@@ -19,12 +20,14 @@ const ProjectList = ()=> {
             </Container>
             <Container xs={12} className="px-2">
                 {projects?.map((project) => (
-                    <CardProject key={project.id} project={project}/>
+                    <MobileCard key={project.id} project={project}/>
                     )
                 )}
+                <Row className="desktopCard py-4">
+                    <DesktopCard/>
+                </Row>
             </Container>
-        </>
-        
+        </> 
     )
     
 }

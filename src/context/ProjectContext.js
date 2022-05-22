@@ -26,7 +26,7 @@ export const ProjectProvider = ({children})=> {
       id: 3,
       name: "Caelum Joyas",
       description: "First project",
-      projectManager: "Chris Viera",
+      projectManager: "Olga Amado",
       assignedTo: "Mariam Viera Amado",
       status: "Enabled",
       date: new Date()
@@ -35,6 +35,8 @@ export const ProjectProvider = ({children})=> {
   
   const [showModal, setShowModal ] = useState(false);
   const handleCloseModal = () => setShowModal(false);
+
+  const deleteConfirm = ()=> setShowModal(true);
 
   const deleteProject = (id)=> {
     setProjects((item) => item.filter((e) => e !== id));
@@ -71,7 +73,8 @@ export const ProjectProvider = ({children})=> {
         validateForm,
         handleCloseModal,
         showModal,
-        setShowModal
+        setShowModal,
+        deleteConfirm
       }}>
       {children}
     </ProjectContext.Provider>
