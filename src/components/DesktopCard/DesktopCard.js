@@ -4,9 +4,10 @@ import { BsPencilSquare, BsThreeDotsVertical, BsTrash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { ProjectContext } from "../../context/ProjectContext";
 import ModalProject from "../Modal/Modal";
+import Pagination from "../Pagination/Pagination";
 
 const DesktopCard = ()=> {
-    const { projects, deleteConfirm } = useContext(ProjectContext);
+    const { filteredProjects, currentPage, handlePrevPage, handleNextPage, deleteConfirm } = useContext(ProjectContext);
 
     return (
         <>
@@ -21,7 +22,7 @@ const DesktopCard = ()=> {
                     </tr>
                 </thead>
                 <tbody> 
-                    {projects?.map((project) => ( 
+                    {filteredProjects()?.map((project) => ( 
                         <tr key={project.id}>
                             <td>
                                 <h5>{project.name}</h5>
@@ -52,6 +53,12 @@ const DesktopCard = ()=> {
                     ))}
                 </tbody>
             </Table>
+            <Pagination
+            onPrev={handlePrevPage}
+            onNext={handleNextPage}
+            disabledButtonPrev={currentPage === 0}
+            disabledButtonNext={filteredProjects().length < 4}
+            />
         </>
     )
 }

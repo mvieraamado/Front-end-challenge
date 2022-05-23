@@ -30,9 +30,65 @@ export const ProjectProvider = ({children})=> {
       assignedTo: "Mariam Viera Amado",
       status: "Enabled",
       date: new Date()
-      }
+      },
+    {
+      id: 4,
+      name: "My app",
+      description: "Project",
+      projectManager: "Olga Amado",
+      assignedTo: "Mariam Viera Amado",
+      status: "Enabled",
+      date: new Date()
+    },
+    {
+      id: 5,
+      name: "JavaScript",
+      description: "Project",
+      projectManager: "Olga Amado",
+      assignedTo: "Mariam Viera Amado",
+      status: "Enabled",
+      date: new Date()
+    },
+    {
+      id: 6,
+      name: "Blog",
+      description: "Some description",
+      projectManager: "Olga Amado",
+      assignedTo: "Mariam Viera Amado",
+      status: "Enabled",
+      date: new Date()
+    },
+    {
+      id: 7,
+      name: "My projects",
+      description: "Some description",
+      projectManager: "Olga Amado",
+      assignedTo: "Mariam Viera Amado",
+      status: "Enabled",
+      date: new Date()
+    }
   ])
+
+  /* Pagination */
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const filteredProjects = () => {
+    return projects.slice(
+      currentPage,
+      currentPage + 4
+    );
+  }
+
+  const handlePrevPage = () => {
+    if (currentPage > 0)
+      setCurrentPage(currentPage - 4);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage(currentPage + 4);
+  };
   
+  /* Modal */
   const [showModal, setShowModal ] = useState(false);
   const handleCloseModal = () => setShowModal(false);
 
@@ -43,6 +99,7 @@ export const ProjectProvider = ({children})=> {
     handleCloseModal();
   }
 
+  /* Validation form */
   const validateForm = (values)=>{
       
     const errors = {};
@@ -74,7 +131,12 @@ export const ProjectProvider = ({children})=> {
         handleCloseModal,
         showModal,
         setShowModal,
-        deleteConfirm
+        deleteConfirm, 
+        filteredProjects,
+        currentPage,
+        setCurrentPage,
+        handlePrevPage,
+        handleNextPage
       }}>
       {children}
     </ProjectContext.Provider>
